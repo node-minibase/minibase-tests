@@ -82,11 +82,12 @@ module.exports = function minibaseTests (App, opts) {
     return Bluebird.resolve()
   })
 
-  runner.addTest('should return an instance of EventEmitter3', function () {
+  runner.addTest('should be an instance of event emitter', function () {
     if (opts.isBase) {
       return Bluebird.resolve()
     }
-    // assert.strictEqual(App() instanceof EventEmitter3, true)
+    assert.strictEqual(App() instanceof EventEmitter3, true, 'should be instanceof EventEmitter3')
+    assert.strictEqual((new App()) instanceof EventEmitter3, true, 'should be instanceof EventEmitter3')
     return Bluebird.resolve()
   })
 
