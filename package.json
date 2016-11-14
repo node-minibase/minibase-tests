@@ -23,7 +23,7 @@
   "dependencies": {
     "assert-kindof": "^2.0.0",
     "eventemitter3": "^2.0.2",
-    "minibase": "^0.4.5",
+    "minibase": "*",
     "mukla": "^0.4.8"
   },
   "devDependencies": {
