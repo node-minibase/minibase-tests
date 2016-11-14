@@ -20,6 +20,52 @@ const minibaseTests = require('minibase-tests')
 
 ## API
 
+### [suite](index.js#L68)
+> Test any app based on [minibase][] and [base][], just pass constructor as `App` argument. If it is `base` based pass `opts.isBase: true` option. When run `.runTests` it returns resolved Promise with array with length of 18. If any of the defined tests fails it will return rejected Promise.
+
+**Params**
+
+* `App` **{Function}**: app constructor, if not a function returns rejected promise    
+* `opts` **{Object}**: optional object, pass `isBase: true` for [base][] apps    
+* `returns` **{Promise}**: promise if `App` not a function or instance of [Runner](./runner.js), so call `.runTests()`  
+
+**Example**
+
+```js
+var suite = require('minibase-tests')
+var Base = require('base')
+var Assemble = require('assemble-core')
+var Templates = require('templates')
+var MiniBase = require('minibase').MiniBase
+
+suite(Base, { isBase: true })
+.runTests().then(function (res) {
+  console.log(res.length) // => 18
+})
+suite(Assemble, { isBase: true })
+.runTests().then(function (res) {
+  console.log(res.length) // => 18
+})
+suite(Templates, { isBase: true })
+.runTests().then(function (res) {
+  console.log(res.length) // => 18
+})
+
+// MiniBase itself passes these tests too
+suite(MiniBase).runTests().then(function (res) {
+  console.log(res.length) // => 18
+})
+
+function MyApp () {
+  MiniBase.call(this)
+}
+MiniBase.extend(MyApp)
+
+suite(MyApp).runTests().then(function (res) {
+  console.log(res.length) // => 18
+})
+```
+
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/node-minibase/minibase-tests/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
