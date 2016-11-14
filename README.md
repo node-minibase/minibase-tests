@@ -20,8 +20,8 @@ const minibaseTests = require('minibase-tests')
 
 ## API
 
-### [suite](index.js#L68)
-> Test any app based on [minibase][] and [base][], just pass constructor as `App` argument. If it is `base` based pass `opts.isBase: true` option. When run `.runTests` it returns resolved Promise with array with length of 18. If any of the defined tests fails it will return rejected Promise.
+### [suite](index.js#L78)
+> Test any app based on [minibase][] and [base][], just pass constructor as `App` argument. If it is `base` based pass `opts.isBase: true` option. When run `.runTests` it returns resolved Promise with array with length of 0 if all tests are passed. If any of the tests fails that `result` array will contain these tests - their title, index and the error. Resolved array also has `.tests` property which is the count of all tests, so easily you can do `res.tests - res.length` to find how many tests are failed, and get them by outputing `res`.
 
 **Params**
 
@@ -40,20 +40,26 @@ var MiniBase = require('minibase').MiniBase
 
 suite(Base, { isBase: true })
 .runTests().then(function (res) {
-  console.log(res.length) // => 18
+  // if `res` has bigger length
+  // it will contain failed tests
+  console.log(res.length) // => 0
+  console.log(res.tests) // => 18
 })
 suite(Assemble, { isBase: true })
 .runTests().then(function (res) {
-  console.log(res.length) // => 18
+  console.log(res.length) // => 0
+  console.log(res.tests) // => 18
 })
 suite(Templates, { isBase: true })
 .runTests().then(function (res) {
-  console.log(res.length) // => 18
+  console.log(res.length) // => 0
+  console.log(res.tests) // => 18
 })
 
 // MiniBase itself passes these tests too
 suite(MiniBase).runTests().then(function (res) {
-  console.log(res.length) // => 18
+  console.log(res.length) // => 0
+  console.log(res.tests) // => 18
 })
 
 function MyApp () {
@@ -62,7 +68,8 @@ function MyApp () {
 MiniBase.extend(MyApp)
 
 suite(MyApp).runTests().then(function (res) {
-  console.log(res.length) // => 18
+  console.log(res.length) // => 0
+  console.log(res.tests) // => 18
 })
 ```
 
