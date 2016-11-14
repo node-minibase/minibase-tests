@@ -38,7 +38,21 @@
   "files": [
     "index.js"
   ],
-  "keywords": [],
+  "keywords": [
+    "application",
+    "apps",
+    "base",
+    "compat",
+    "compatible",
+    "mini",
+    "minibase",
+    "minitests",
+    "mukla",
+    "suite",
+    "test",
+    "tests",
+    "testsuite"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
