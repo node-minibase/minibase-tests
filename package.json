@@ -24,8 +24,7 @@
     "assert-kindof": "^2.0.0",
     "bluebird": "^3.4.6",
     "each-promise": "^1.0.2",
-    "eventemitter3": "^2.0.2",
-    "minibase": "*"
+    "eventemitter3": "^2.0.2"
   },
   "devDependencies": {
     "assemble-core": "^0.26.0",
@@ -33,6 +32,7 @@
     "commitizen": "~2.7.0",
     "coveralls": "^2.11.15",
     "cz-conventional-changelog": "1.1.5",
+    "minibase": "^0.4.5",
     "mukla": "^0.4.8",
     "nyc": "^8.3.2",
     "pre-commit": "^1.1.3",
