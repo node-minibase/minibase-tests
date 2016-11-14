@@ -70,15 +70,23 @@
     "tasks": [
       "readme"
     ],
-    "lint": {
-      "reflinks": true
-    },
     "related": {
-      "list": []
+      "list": [
+        "assemble-core",
+        "assemble",
+        "generate",
+        "templates",
+        "minibase",
+        "minibase-is-registered",
+        "minibase-create-plugin"
+      ]
     },
     "reflinks": [
       "base",
       "minibase"
-    ]
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }
