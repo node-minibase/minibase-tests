@@ -41,7 +41,8 @@
     "templates": "^0.25.2"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "runner.js"
   ],
   "keywords": [
     "application",
