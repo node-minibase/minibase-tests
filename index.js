@@ -77,8 +77,8 @@ module.exports = function minibaseTests (App, opts) {
     assertKindof.function(foo.extend)
 
     if (!opts.isBase) {
-      assertKindof.function(foo.delegate)
-      assertKindof.function(foo.define)
+      assert.strictEqual(typeof foo.delegate, 'function')
+      assert.strictEqual(typeof foo.define, 'function')
     }
 
     assertKindof.undefined(foo())
