@@ -38,23 +38,23 @@ var Runner = require('./runner')
  *   // if `res` has bigger length
  *   // it will contain failed tests
  *   console.log(res.length) // => 0
- *   console.log(res.tests) // => 18
+ *   console.log(res.tests) // => 17
  * })
  * suite(Assemble, { isBase: true })
  * .runTests().then(function (res) {
  *   console.log(res.length) // => 0
- *   console.log(res.tests) // => 18
+ *   console.log(res.tests) // => 17
  * })
  * suite(Templates, { isBase: true })
  * .runTests().then(function (res) {
  *   console.log(res.length) // => 0
- *   console.log(res.tests) // => 18
+ *   console.log(res.tests) // => 17
  * })
  *
  * // MiniBase itself passes these tests too
  * suite(MiniBase).runTests().then(function (res) {
  *   console.log(res.length) // => 0
- *   console.log(res.tests) // => 18
+ *   console.log(res.tests) // => 17
  * })
  *
  * function MyApp () {
@@ -64,7 +64,7 @@ var Runner = require('./runner')
  *
  * suite(MyApp).runTests().then(function (res) {
  *   console.log(res.length) // => 0
- *   console.log(res.tests) // => 18
+ *   console.log(res.tests) // => 17
  * })
  * ```
  *
