@@ -32,7 +32,7 @@
     "commitizen": "~2.7.0",
     "coveralls": "^2.11.15",
     "cz-conventional-changelog": "1.1.5",
-    "minibase": "^0.4.5",
+    "minibase": "*",
     "mukla": "^0.4.8",
     "nyc": "^8.3.2",
     "pre-commit": "^1.1.3",
