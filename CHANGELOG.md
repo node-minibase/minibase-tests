@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/node-minibase/minibase-tests/compare/v1.1.0...v1.1.1) (2016-11-17)
+
+
+### Bug Fixes
+
+* **appveyor:** allow failures ([f2faf60](https://github.com/node-minibase/minibase-tests/commit/f2faf60))
+* **tests:** fix and remove tests for "use" event ([6291e8f](https://github.com/node-minibase/minibase-tests/commit/6291e8f))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/node-minibase/minibase-tests/compare/v1.0.3...v1.1.0) (2016-11-14)
 

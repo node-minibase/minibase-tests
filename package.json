@@ -1,6 +1,6 @@
 {
   "name": "minibase-tests",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Tests for applications built on [minibase][] or [base][]. All Base apps passes these tests.",
   "repository": "node-minibase/minibase-tests",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
