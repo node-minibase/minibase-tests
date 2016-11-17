@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/node-minibase/minibase-tests/compare/v1.1.1...v1.1.2) (2016-11-17)
+
+
+### Bug Fixes
+
+* **package:** wildstar for minibase devDep ([e3b8eec](https://github.com/node-minibase/minibase-tests/commit/e3b8eec))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/node-minibase/minibase-tests/compare/v1.1.0...v1.1.1) (2016-11-17)
 
