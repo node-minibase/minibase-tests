@@ -256,13 +256,7 @@ module.exports = function minibaseTests (App, opts) {
       return Bluebird.resolve()
     }
     var app = new App({ silent: true })
-    var called = false
 
-    app.on('use', /* istanbul ignore next */ function () {
-      // should not be called
-      // because plugin errors
-      called = true
-    })
     return new Bluebird(function (resolve) {
       app.on('error', function (err) {
         assertKindof.error(err)
@@ -270,33 +264,10 @@ module.exports = function minibaseTests (App, opts) {
         assertKindof.string(err.message)
         assert.strictEqual(err.message, 'plugin err')
         assert.strictEqual(err instanceof Error, true)
-        assert.strictEqual(called, false)
         resolve()
       })
       app.use(function (app) {
         throw new Error('plugin err')
-      })
-    })
-  })
-
-  runner.addTest('should emit `use` event if plugin dont have errors', function () {
-    if (opts.isBase) {
-      return Bluebird.resolve()
-    }
-    var base = new App()
-
-    return new Bluebird(function (resolve, reject) {
-      base.once('error', reject)
-      base.on('use', function (fn, res) {
-        assertKindof.function(fn)
-        assertKindof.number(res)
-        assert.strictEqual(res, 123)
-        assert.strictEqual(base.foo, 123)
-        resolve()
-      })
-      base.use(function (self) {
-        self.foo = 123
-        return self.foo
       })
     })
   })

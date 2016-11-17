@@ -30,12 +30,14 @@ Runner.prototype.runTests = function runTests (show) {
     afterEach: function (item) {
       /* istanbul ignore next */
       if (!show) return
-        /* istanbul ignore next */
+
+      /* istanbul ignore next */
       if (item.reason) {
         console.error('not ok', item.index + 1, titles[item.index])
         console.error(item.reason.stack)
         return
       }
+
       /* istanbul ignore next */
       console.log('ok', item.index + 1, titles[item.index])
     }
