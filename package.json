@@ -24,7 +24,7 @@
     "assert-kindof": "^2.0.0",
     "bluebird": "^3.4.6",
     "each-promise": "^1.0.2",
-    "eventemitter3": "^2.0.2"
+    "eventemitter3": "2.0.2"
   },
   "devDependencies": {
     "assemble-core": "^0.26.0",
