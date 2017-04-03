@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "assemble-core": "^0.26.0",
-    "base": "^0.11.1",
+    "base": "^0.13.0",
     "commitizen": "~2.7.0",
     "coveralls": "^2.11.15",
     "cz-conventional-changelog": "1.1.5",
